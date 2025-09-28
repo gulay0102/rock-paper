@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="az">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Rock · Paper · Scissors</h1>
+
+      <section class="scoreboard" aria-label="Scoreboard">
+        <div class="score player">
+          <h2>Player (Siz)</h2>
+          <div id="playerScore" class="score-value">0</div>
+        </div>
+        <div class="vs">VS</div>
+        <div class="score computer">
+          <h2>Computer</h2>
+          <div id="computerScore" class="score-value">0</div>
+        </div>
+      </section>
+
+      <section class="choices" aria-label="Player choices">
+        <button class="choice" data-choice="rock" aria-label="Rock">
+          ✊<span>Rock</span>
+        </button>
+        <button class="choice" data-choice="paper" aria-label="Paper">
+          🖐️<span>Paper</span>
+        </button>
+        <button class="choice" data-choice="scissors" aria-label="Scissors">
+          ✌️<span>Scissors</span>
+        </button>
+      </section>
+
+      <section class="result-area" aria-live="polite">
+        <div id="resultMessage" class="result-message">
+          Seçim edin — oyuna başlamaq üçün düymələrdən birini klikləyin.
+        </div>
+        <div class="round-info">
+          <div>Player chose: <span id="playerChoice">—</span></div>
+          <div>Computer chose: <span id="computerChoice">—</span></div>
+        </div>
+      </section>
+
+      <div class="controls">
+        <button id="resetBtn" class="reset">Reset Game</button>
+      </div>
+
+      <footer class="note">
+        <small>Qaydalar: Rock > Scissors, Scissors > Paper, Paper > Rock</small>
+      </footer>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>
